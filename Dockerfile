@@ -1,4 +1,19 @@
-FROM ubuntu:latest
-LABEL authors="jorda"
+FROM python:3.12-slim
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+# Copier seulement le fichier requirements.txt pour profiter du cache Docker
+COPY requirements.txt .
+
+# Installer les dépendances
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copier le reste du code
+COPY . .
+
+# Exposer le port Flask
+EXPOSE 5000
+
+# Commande par défaut
+ENTRYPOINT ["python", "app.py"]
+
