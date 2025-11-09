@@ -1,0 +1,16 @@
+# Fichiers Python
+__pycache__/
+*.pyc
+
+# Environnement virtuel
+.venv/
+
+# Clés API / secrets
+.env
+
+# Logs et fichiers temporaires
+*.log
+
+# Docker
+*.tar
+#
