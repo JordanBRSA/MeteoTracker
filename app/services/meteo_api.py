@@ -2,8 +2,6 @@ import os
 import requests
 from dotenv import load_dotenv
 
-from app.services.utils import affichageVille
-
 load_dotenv()   #-> charge les valeur de .env
 
 API_KEY = os.getenv("API_KEY")

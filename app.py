@@ -1,7 +1,7 @@
 import os
 import argparse
 
-from app.services.meteo_api import get_weather_by_city, DEFAULT_CITY
+from app.services.meteo_api import get_weather_by_city
 from app.services.utils import affichageVille
 
 def main():
