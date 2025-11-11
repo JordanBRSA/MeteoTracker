@@ -13,7 +13,7 @@ LANG = os.getenv("LANG")
 
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
-def get_weather_by_city(city_name: str = DEFAULT_CITY) -> dict:
+def get_weather_by_city(city_name : str) -> dict:
     params = {
         "q": city_name,
         "appid": API_KEY,
@@ -42,7 +42,6 @@ def get_weather_by_city(city_name: str = DEFAULT_CITY) -> dict:
     except requests.exceptions.RequestException as e:
         # Pour toutes les autres erreurs (connexion, DNS, etc.)
         return {"error": f"Erreur de connexion : {e}"}
-
 
 def weather_data(api_json: dict) -> dict:
 
