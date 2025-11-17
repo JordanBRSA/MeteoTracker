@@ -15,5 +15,5 @@ COPY . .
 EXPOSE 5000
 
 # Commande par défaut
-ENTRYPOINT ["python", "app.py"]
+ENTRYPOINT ["python", "main.py"]
 
